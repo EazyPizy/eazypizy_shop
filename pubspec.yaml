@@ -8,9 +8,16 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
+  cached_network_image: ^3.2.3
+  confetti: ^0.7.0
   flutter:
     sdk: flutter
+  flutter_screenutil: ^5.8.4
   get: ^4.6.5
+  intl: ^0.18.0
+  logger: ^1.1.0
+  pinput: ^3.0.0
+  quickalert: ^1.0.1
 
 dev_dependencies:
   flutter_test:
