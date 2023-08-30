@@ -1,5 +1,7 @@
+import 'package:eazypizy_shop/module/home/components/variant_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 import '../../../theme/theme.dart';
 import '../../../widgets/eazy_widgets.dart';
@@ -22,20 +24,33 @@ class ProductTile extends StatelessWidget {
         //   errorBuilder: (context, error, stackTrace) => const Placeholder(),
         // ),
       ),
+      // isThreeLine: true,
       title: Text(
         'ProductName' ?? '',
         // style: Get.textTheme.titleMedium,
       ),
-      subtitle: Row(
+      subtitle: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            'RetailPrice',
-            // style: Get.textTheme.titleMedium,
+          Row(
+            children: [
+              Text(
+                'RetailPrice',
+                style: TextStyle(color: EazyColors.black),
+              ),
+              Space.horizontal(4),
+              Text(
+                'MRP',
+                style: TextStyle(color: EazyColors.black),
+              ),
+            ],
           ),
-          Space.horizontal(4),
-          Text(
-            'MRP',
-            // style: Get.textTheme.titleMedium,
+          InkWell(
+            onTap: variantSheet,
+            child: Text(
+              'data',
+              style: TextStyle(color: EazyColors.black),
+            ),
           ),
         ],
       ),

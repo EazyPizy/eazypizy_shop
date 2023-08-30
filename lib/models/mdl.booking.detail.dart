@@ -110,30 +110,6 @@ class BookingDetailModel {
       };
 }
 
-// {
-//       'products': [
-//         cartData().products[0].toJson(),
-//       ],
-//       'eazymen_id': cartData().eazyMen.eazyManUid,
-//       'eazymen_name': cartData().eazyMen.personalDetail!.firstName,
-//       'eazymen_location': cartData().eazyMen.personalDetail!.city,
-//       'eazymen_fcm_token': cartData().eazyMen.fcmToken,
-//       'payment_tax': 0,
-//       'payment_items_total': 299,
-//       'payment_discount': 0,
-//       'payment_total': 299,
-//       'customer_id': customer.id,
-//       'customer_name': customer.name,
-//       'customer_address': customer.address,
-//       'customer_phone': customer.phoneNumber,
-//       'customer_pincode': customer.pincode,
-//       'customer_fcm_token': customer.fcmToken,
-//       'customer_landmark': 'landmark',
-//       'booking_date': bookingDate.toString(),
-//       'booking_time': bookingTime.toString(),
-//       'booking_status': 0,
-//     }
-
 class AddressModel {
   AddressModel({
     required this.houseNumber,

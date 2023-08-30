@@ -2,6 +2,7 @@ library eazypizy_shop;
 
 import 'package:eazypizy_shop/module/home/components/MainCategoryCard.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ShopHomeWidget extends StatelessWidget {
   ShopHomeWidget({super.key});
@@ -22,11 +23,11 @@ class ShopHomeWidget extends StatelessWidget {
               backgroundColor: Colors.green,
               surfaceTintColor: Colors.green,
               pinned: true,
-              expandedHeight: 340,
+              expandedHeight: 340.h,
               flexibleSpace: FlexibleSpaceBar(
                 title: Text(
                   'Hardware Store',
-                  style: TextStyle(fontSize: 25),
+                  style: TextStyle(fontSize: 25.sp),
                 ),
                 background: Container(
                   color: Colors.amber,
@@ -41,17 +42,10 @@ class ShopHomeWidget extends StatelessWidget {
             ),
           ];
         },
-        body: SingleChildScrollView(
-          child: Column(
-            children: [
-              ListView.builder(
-                shrinkWrap: true,
-                physics: NeverScrollableScrollPhysics(),
-                itemCount: mainCategory.length,
-                itemBuilder: (ctx, i) => MainCategoryCard(mainCategory[i]),
-              ),
-              //Text("Sliver App Bar"),
-            ],
+        body: ListView.builder(
+          itemCount: mainCategory.length,
+          itemBuilder: (ctx, i) => MainCategoryCard(
+            mainCategory[i],
           ),
         ),
       ),
